@@ -1,5 +1,4 @@
 from django.shortcuts import render
-from django.http import HttpResponse
 
 def index(request):
-    return HttpResponse('<h1>Alura Space</h1> <p>Bem-vindos ao espaço</p>') # Cria diretamente um index dentro de uma função
+    return render(request, 'galeria/index.html') # Tirando HttpResponse e, usando render, vai fazer com que a função procure um arquivo HTML através de um endereço

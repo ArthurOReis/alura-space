@@ -46,7 +46,7 @@ ROOT_URLCONF = 'setup.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'templates')], # Referência ao local dos arquivos HTML, onde na função join é inserido onde vai ser procurado e a pasta local
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
