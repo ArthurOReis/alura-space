@@ -1,8 +1,8 @@
 from django.contrib import admin
-from django.urls import path
-from galeria.views import index #Importa a função view que faz retorno de uma requisição HTTP
+from django.urls import path, include
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', index) #Cria uma rota e o que retornar com a sua requisição
+    path('', include('galeria.urls')), # Em galeria, é criado 'urls.py' para se responsabilizar em criar outras páginas,
 ]
