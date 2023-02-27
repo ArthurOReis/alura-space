@@ -1,19 +1,6 @@
-{% load static %} <!- Indica a existência de arquivos estáticos (CSS,JS...) no HTML ->
-<!DOCTYPE html>
-<html lang="pt-br">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Alura Space</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{% static '/styles/style.css' %}"> <!- Para referenciar o arquivo, usar "{% static '< caminho até o arquivo >' %}" ->
-</head>
-
-<body>
+{% extends 'galeria/base.html' %} <!- Mostra para o Django se o arquivo está extendendo de outro ->
+{% load static %}
+{% block content %} <!- É onde fica marcado aonde todo o conteúdo vai ser inserido no arquivo até o 'endblock' ->
     <div class="pagina-inicial">
         <header class="cabecalho">
             <img src="{% static '/assets/logo/Logo(2).png'%}" alt="Logo da Alura Space" />
@@ -158,6 +145,4 @@
         </div>
         <p class="rodape__texto">Desenvolvido por Alura</p>
     </footer>
-</body>
-
-</html>
+{% endblock %} <!- Onde fica marcado o fim do conteúdo HTML ->
