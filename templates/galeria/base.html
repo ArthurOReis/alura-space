@@ -15,6 +15,8 @@
 </head>
 
 <body>
+    {% include 'galeria/partials/_menu.html' %}
     {% block content %}{% endblock %} <!- Para inserir o conteúdo HTML de outros arquivos que vai usar o base.html, usa-se as palavras-chaves blcok ->
+    {% include 'galeria/partials/_footer.html' %} <!- Similar com o block content, o include irá incluir mais conteúdo HTML fora dos blocks ->
 </body>
 </html>
